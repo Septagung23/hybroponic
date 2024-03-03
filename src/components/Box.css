@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  padding-top: 1rem;
+}
+
+.kotak {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  min-height: 15rem;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.symbol {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border: 1px solid greenyellow;
+  border-radius: 50%;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}

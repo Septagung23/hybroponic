@@ -1,7 +1,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import AdbIcon from "@mui/icons-material/Adb";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -12,15 +11,19 @@ function ResponsiveAppBar() {
   return (
     <AppBar className="navbar">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <div style={{ display: "flex", alignItems: "center" }} className="logo">
           <AdbIcon />
-          <Button>
-            <h3>Hybroponic</h3>
+          <Button color="inherit" href="/">
+            Hybroponic
           </Button>
         </div>
-        <div>
-          <Button color="inherit">Dashboard</Button>
-          <Button color="inherit">History</Button>
+        <div className="menu">
+          <Button color="inherit" href="/">
+            Dashboard
+          </Button>
+          <Button color="inherit" href="/history">
+            History
+          </Button>
           <IconButton>
             <AccountCircle />
           </IconButton>

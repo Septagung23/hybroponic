@@ -1,8 +1,5 @@
 .navbar {
   position: static !important;
-  min-width: 100%;
-  font-family: "Source Sans Pro", "Arial", sans-serif;
-  font-weight: bold !important;
   color: black !important;
   background-color: #a7c957 !important;
   display: flex;
@@ -10,11 +7,15 @@
   flex: 1;
 }
 
-.navbar button,
-h3 {
-  margin: 0;
+.navbar a {
+  padding: 0;
+  margin: 0 0.5rem;
   font-size: large;
   font-family: "Source Sans Pro", "Arial", sans-serif;
   font-weight: 600;
   color: black;
+}
+
+.navbar a:hover {
+  color: #fff;
 }

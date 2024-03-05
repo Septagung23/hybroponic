@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import ResponsiveAppBar from "./components/Navbar";
-import ParamBox from "./components/ParamBox";
+import Dashboard from "./pages/Dashboard";
+import History from "./pages/History";
 
 function App() {
   return (
     <>
-      <ResponsiveAppBar />
-      <ParamBox />
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Dashboard />} />
+          <Route path="/history" exact element={<History />} />
+        </Routes>
+      </Router>
     </>
   );
 }

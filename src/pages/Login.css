@@ -1,0 +1,45 @@
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #4caf50,
+    #5db44e,
+    #6db94d,
+    #7cbe4b,
+    #8bc34a
+  );
+}
+
+.login a {
+  background-color: #4caf50;
+}
+.login a:hover {
+  color: #4caf50;
+  background-color: #fff;
+}
+.login h1 {
+  text-transform: uppercase;
+  font-family: "Anta", sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}

@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  color: #fff;
+  font-family: "Source Sans Pro", "Arial", sans-serif !important;
+}
+
+h3 {
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .paramcontainer {
@@ -11,50 +24,49 @@
   width: 100%;
   padding-top: 1rem;
 }
-.overrideButton {
-  display: flex;
-  flex-direction: column;
-  max-width: 15rem;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.overrideButton span {
-  font-family: "Source Sans Pro", "Arial", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
 .kotak {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: #ccc;
   padding: 1rem;
   margin: 10px;
   text-align: center;
   border-radius: 5px;
   min-height: 15rem;
 }
-
-h3 {
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.symbol {
-  width: 10px;
-  height: 10px;
+.on {
+  width: 15px;
+  height: 15px;
   background-color: green;
-  border: 1px solid greenyellow;
+  border: 1px solid black;
   border-radius: 50%;
 }
+.off {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
 .name {
   display: flex;
   justify-content: space-between;
+}
+
+.overrideButton {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  background-color: #ccc;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.overrideButton span {
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
 }

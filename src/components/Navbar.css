@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   flex: 1;
+  /* border-radius: 0 0 1rem 1rem; */
 }
 
 .navbar a {

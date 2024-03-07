@@ -20,3 +20,16 @@
 .navbar a:hover {
   color: #fff;
 }
+
+.MuiMenu-list li {
+  color: black;
+}
+
+.logo a {
+  font-family: "Anta", sans-serif;
+}
+.logo img {
+  width: 1.5rem;
+  margin-bottom: 0.9rem;
+  margin-right: 5px;
+}

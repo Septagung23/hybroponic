@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: #fff;
+  color: #000;
   font-family: "Source Sans Pro", "Arial", sans-serif !important;
 }
 
@@ -28,7 +28,8 @@ h3 {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #ccc;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   padding: 1rem;
   margin: 10px;
   text-align: center;
@@ -59,7 +60,8 @@ h3 {
   display: flex;
   flex-direction: column;
   max-width: 15rem;
-  background-color: #ccc;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  background-color: #fff;
   text-align: center;
   border-radius: 5px;
   padding: 10px;

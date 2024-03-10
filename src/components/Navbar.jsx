@@ -2,7 +2,6 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import AdbIcon from "@mui/icons-material/Adb";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import "./Navbar.css";
@@ -36,6 +35,9 @@ function ResponsiveAppBar() {
           </Button>
           <Button color="inherit" href="/history">
             History
+          </Button>
+          <Button color="inherit" href="/setting">
+            Setting
           </Button>
           <IconButton
             id="account-menu"

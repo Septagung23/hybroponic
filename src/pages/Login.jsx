@@ -1,34 +1,42 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { Button } from "@mui/material";
 import logoWhite from "../assets/logoIjo.svg";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../components/providers/AuthProvider";
+import { useForm } from "react-hook-form";
 
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [isShow, setIsShow] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isSubmitting },
+  } = useForm();
 
-  /**
-   * @type {React.MutableRefObject<HTMLInputElement>}
-   */
-  const emailRef = useRef(null);
+  // /**
+  //  * @type {React.MutableRefObject<HTMLInputElement>}
+  //  */
+  // const emailRef = useRef(null);
+  // /**
+  //  * @type {React.MutableRefObject<HTMLInputElement>}
+  //  */
+  // const passwordRef = useRef(null);
+  // /**
+  //  * @param {React.FormEvent<HTMLFormElement>} event
+  //  */
 
-  /**
-   * @type {React.MutableRefObject<HTMLInputElement>}
-   */
-  const passwordRef = useRef(null);
-
-  /**
-   * @param {React.FormEvent<HTMLFormElement>} event
-   */
-  async function handleSubmit(event) {
-    event.preventDefault();
-
+  async function submit(data) {
     try {
-      await login(emailRef.current.value, passwordRef.current.value);
+      await login(data.email, data.password);
       navigate("/");
     } catch (error) {
+      setError("root", {
+        message: "*Email/Password yang anda masukkan salah",
+      });
       console.error(error);
     }
   }
@@ -37,20 +45,27 @@ export default function Login() {
     <div className="page">
       <div className="container">
         <div className="form-login">
-          <form className="login" onSubmit={handleSubmit}>
+          <form className="login" onSubmit={handleSubmit(submit)}>
             <h1>Login</h1>
-            <input ref={emailRef} type="text" placeholder="Email" />
-            <input ref={passwordRef} type="password" placeholder="Password" />
-            {/* <TextField id="username" label="Username" variant="outlined" /> */}
-            {/* <TextField
-              id="password"
-              label="Password"
-              variant="outlined"
-              type="password"
-            /> */}
-            <Button variant="contained" type="submit">
-              Submit
+            <input {...register("email")} type="text" placeholder="Email" />
+            <input
+              {...register("password")}
+              type={isShow ? "text" : "password"}
+              placeholder="Password"
+            />
+            <div className="check">
+              <input
+                className="checkbox"
+                type="checkbox"
+                checked={isShow}
+                onChange={() => setIsShow(!isShow)}
+              />
+              Tampilkan Password
+            </div>
+            <Button variant="contained" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Loading..." : "Submit"}
             </Button>
+            {errors.root && <p>{errors.root.message}</p>}
           </form>
         </div>
         <div className="content">

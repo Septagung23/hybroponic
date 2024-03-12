@@ -6,8 +6,10 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import "./Navbar.css";
 import logo from "../assets/logoIjo.svg";
+import { useAuth } from "./providers/AuthProvider";
 
 function ResponsiveAppBar() {
+  const { logout } = useAuth();
   const [anchor, setAnchor] = React.useState(null);
   const [open, setOpen] = React.useState(false);
 
@@ -36,7 +38,7 @@ function ResponsiveAppBar() {
           <Button color="inherit" href="/history">
             History
           </Button>
-          <Button color="inherit" href="/setting">
+          <Button color="inherit" href="/setting" disabled>
             Setting
           </Button>
           <IconButton
@@ -55,7 +57,7 @@ function ResponsiveAppBar() {
             onClose={handleClose}
           >
             <MenuItem>Profile</MenuItem>
-            <a href="/login">
+            <a onClick={logout}>
               <MenuItem>Logout</MenuItem>
             </a>
           </Menu>

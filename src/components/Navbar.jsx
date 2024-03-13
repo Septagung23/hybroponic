@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
           <Button color="inherit" href="/history">
             History
           </Button>
-          <Button color="inherit" href="/setting" disabled>
+          <Button color="inherit" href="/system">
             Setting
           </Button>
           <IconButton

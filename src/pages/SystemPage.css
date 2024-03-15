@@ -1,0 +1,61 @@
+h1 {
+  margin-block: 0 1rem;
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: start;
+  margin: 0;
+}
+p {
+  color: black;
+  font-weight: 100;
+}
+button {
+  margin-top: 1rem;
+  color: white;
+}
+
+.setting-container {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  border-bottom: 1px solid #ccc;
+}
+
+.setting-form {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form {
+  flex-wrap: wrap;
+  align-self: end;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-block: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.form div {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  align-self: end;
+  gap: 1rem;
+}

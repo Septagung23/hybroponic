@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import PublicRoutes from "./routes/PublicRoutes";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Root from "./root";
+import SystemPage from "./pages/SystemPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
           {
             path: "/history",
             element: <History />,
+          },
+          {
+            path: "/system",
+            element: <SystemPage />,
           },
         ],
       },

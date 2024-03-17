@@ -32,47 +32,52 @@ export default function SystemPage() {
           <p>
             Silakan isi form dibawah ini untuk mengatur batas bawah dan batas
             atas untuk nilai parameter suhu, pH, dan TDS air pada pipa
-            Hidroponik Anda.
+            Hidroponik Anda. (*Gunakan satuan{" "}
+            <strong>&deg;C untuk parameter Suhu </strong>dan{" "}
+            <strong>satuan ppm untuk parameter TDS</strong>)
           </p>
         </div>
         <form className="setting-form" onSubmit={handleSubmit(onSubmit)}>
           <h2>Suhu</h2>
           <div className="form">
             <div>
-              <label htmlFor="suhuAtas">Batas Atas</label>
-              <input {...register("suhuAt")} id="suhuAtas" type="number" />
-            </div>
-            <div>
-              <label htmlFor="suhuBawah">Batas Bawah</label>
-              <input {...register("suhuBh")} id="suhuBawah" type="number" />
+              <div className="up">
+                <label htmlFor="suhuAtas">Batas Atas</label>
+                <input {...register("suhuAt")} id="suhuAtas" type="number" />
+              </div>
+              <div className="down">
+                <label htmlFor="suhuBawah">Batas Bawah</label>
+                <input {...register("suhuBh")} id="suhuBawah" type="number" />
+              </div>
             </div>
           </div>
           <h2>pH</h2>
           <div className="form">
             <div>
-              <label htmlFor="suhuAtas">Batas Atas</label>
-              <input {...register("pHAt")} id="suhuAtas" type="number" />
-            </div>
-            <div>
-              <label htmlFor="suhuBawah">Batas Bawah</label>
-              <input {...register("pHBh")} id="suhuBawah" type="number" />
+              <div className="up">
+                <label htmlFor="suhuAtas">Batas Atas</label>
+                <input {...register("pHAt")} id="suhuAtas" type="number" />
+              </div>
+              <div className="down">
+                <label htmlFor="suhuBawah">Batas Bawah</label>
+                <input {...register("pHBh")} id="suhuBawah" type="number" />
+              </div>
             </div>
           </div>
           <h2>TDS</h2>
           <div className="form">
             <div>
-              <label htmlFor="suhuAtas">Batas Atas</label>
-              <input {...register("tdsAt")} id="suhuAtas" type="number" />
-            </div>
-            <div>
-              <label htmlFor="suhuBawah">Batas Bawah</label>
-              <input {...register("tdsBh")} id="suhuBawah" type="number" />
+              <div className="up">
+                <label htmlFor="suhuAtas">Batas Atas</label>
+                <input {...register("tdsAt")} id="suhuAtas" type="number" />
+              </div>
+              <div className="down">
+                <label htmlFor="suhuBawah">Batas Bawah</label>
+                <input {...register("tdsBh")} id="suhuBawah" type="number" />
+              </div>
             </div>
           </div>
-          <div className="button">
-            <button>Reset</button>
-            <button type="submit">Save</button>
-          </div>
+          <button type="submit">Save</button>
         </form>
       </div>
     </>

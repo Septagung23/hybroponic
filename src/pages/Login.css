@@ -54,6 +54,7 @@
 }
 
 .login button {
+  margin: 0;
   background-color: #4caf50;
 }
 .login button:hover {
@@ -87,7 +88,7 @@
   margin-block: 0;
 }
 
-p {
+.form-login p {
   font-size: medium;
   font-weight: 600;
   align-self: start;

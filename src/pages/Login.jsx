@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@mui/material";
 import logoWhite from "../assets/logoIjo.svg";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
@@ -62,9 +61,9 @@ export default function Login() {
               />
               Tampilkan Password
             </div>
-            <Button variant="contained" type="submit" disabled={isSubmitting}>
+            <button variant="contained" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Loading..." : "Submit"}
-            </Button>
+            </button>
             {errors.root && <p>{errors.root.message}</p>}
           </form>
         </div>

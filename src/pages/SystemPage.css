@@ -1,22 +1,25 @@
-h1 {
+.setting-container h1 {
   margin-block: 0 1rem;
 }
-h2 {
+.setting-container h2 {
   font-size: 2.5rem;
   text-align: start;
   margin: 0;
 }
-p {
+.setting-container p {
   color: black;
   font-weight: 100;
+  text-align: start;
 }
-button {
+.setting-container button {
+  min-width: 8.5rem;
   margin-top: 1rem;
   color: white;
+  align-self: end;
+  background-color: #4caf50;
 }
-
 .setting-container {
-  margin: 0.5rem;
+  margin: 2rem;
   padding: 0.5rem;
   border-radius: 10px;
   background-color: white;
@@ -24,11 +27,12 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
 }
+
 .title {
   border-bottom: 1px solid #ccc;
 }
-
 .setting-form {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
@@ -48,14 +52,34 @@ button {
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
-
 .form div {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
 }
-
-.button {
-  display: flex;
-  align-self: end;
-  gap: 1rem;
+.form label {
+  font-size: 1.5rem;
+}
+.form input {
+  border-radius: 8px;
+  border: 2.5px solid black;
+  width: 8rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(62, 74, 61, 0.1);
+  font-size: medium;
+}
+.form input::placeholder {
+  font-size: medium;
+  color: #000;
+}
+.form input:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.form input::-webkit-outer-spin-button,
+.form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

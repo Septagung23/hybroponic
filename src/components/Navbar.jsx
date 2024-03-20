@@ -50,10 +50,12 @@ function ResponsiveAppBar() {
           }}
           className="logo"
         >
-          <Button color="inherit" href="/">
-            <img src={logo} />
-            Hybroponic
-          </Button>
+          <Link to="/">
+            <Button color="inherit" href="/">
+              <img src={logo} />
+              Hybroponic
+            </Button>
+          </Link>
         </Box>
         <Box
           sx={{

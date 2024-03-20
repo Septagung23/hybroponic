@@ -13,6 +13,7 @@ import logo from "../assets/logoIjo.svg";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useAuth } from "./providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 function ResponsiveAppBar() {
   const { logout } = useAuth();
@@ -60,15 +61,22 @@ function ResponsiveAppBar() {
           }}
           className="menu"
         >
-          <Button color="inherit" href="/">
-            Dashboard
-          </Button>
-          <Button color="inherit" href="/history">
-            History
-          </Button>
-          <Button color="inherit" href="/system">
-            Setting
-          </Button>
+          <Link to="/">
+            <Button color="inherit">
+              Dashboard
+            </Button>
+          </Link>
+          <Link to="/history">
+
+            <Button color="inherit">
+              History
+            </Button>
+          </Link>
+          <Link to="/system">
+            <Button color="inherit">
+              Setting
+            </Button>
+          </Link>
           <IconButton
             id="account-menu"
             aria-controls={open ? "basic-menu" : undefined}

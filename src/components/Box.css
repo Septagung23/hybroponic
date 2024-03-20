@@ -6,19 +6,21 @@
   font-family: "Source Sans Pro", "Arial", sans-serif !important;
 }
 
-h3 {
-  font-family: "Source Sans Pro", "Arial", sans-serif;
+.box h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   gap: 5px;
 }
+.box h1 {
+  margin: 0;
+}
 
 .paramcontainer {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
@@ -26,15 +28,14 @@ h3 {
 }
 .kotak {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   flex: 1;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   padding: 1rem;
   margin: 10px;
-  text-align: center;
   border-radius: 5px;
-  min-height: 15rem;
 }
 .on {
   width: 15px;

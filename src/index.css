@@ -29,6 +29,12 @@ body {
   min-width: 320px;
   font-family: "Source Sans Pro", "Arial", sans-serif;
   min-height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {

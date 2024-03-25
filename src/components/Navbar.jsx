@@ -64,20 +64,13 @@ function ResponsiveAppBar() {
           className="menu"
         >
           <Link to="/">
-            <Button color="inherit">
-              Dashboard
-            </Button>
+            <Button color="inherit">Dashboard</Button>
           </Link>
           <Link to="/history">
-
-            <Button color="inherit">
-              History
-            </Button>
+            <Button color="inherit">History</Button>
           </Link>
           <Link to="/system">
-            <Button color="inherit">
-              Setting
-            </Button>
+            <Button color="inherit">Setting</Button>
           </Link>
           <IconButton
             id="account-menu"
@@ -94,10 +87,12 @@ function ResponsiveAppBar() {
             open={open}
             onClose={handleClose}
           >
-            <MenuItem>Profile</MenuItem>
-            <a onClick={logout}>
+            <Link to="/profile">
+              <MenuItem>Profile</MenuItem>
+            </Link>
+            <span onClick={logout}>
               <MenuItem>Logout</MenuItem>
-            </a>
+            </span>
           </Menu>
         </Box>
 
@@ -157,7 +152,7 @@ function ResponsiveAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <Menu
+        {/* <Menu
           id="account-menu"
           anchorEl={anchor}
           open={open}
@@ -167,7 +162,7 @@ function ResponsiveAppBar() {
           <a onClick={logout}>
             <MenuItem>Logout</MenuItem>
           </a>
-        </Menu>
+        </Menu> */}
       </Toolbar>
     </AppBar>
   );

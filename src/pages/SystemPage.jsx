@@ -28,7 +28,7 @@ export default function SystemPage() {
       <ResponsiveAppBar />
       <div className="setting-container">
         <div className="title">
-          <h1>System Setting</h1>
+          <h1>Add New System</h1>
           <p>
             Silakan isi form dibawah ini untuk mengatur batas bawah dan batas
             atas untuk nilai parameter suhu, pH, dan TDS air pada pipa

@@ -70,7 +70,7 @@ function ResponsiveAppBar() {
             <Button color="inherit">History</Button>
           </Link>
           <Link to="/system">
-            <Button color="inherit">Setting</Button>
+            <Button color="inherit">System</Button>
           </Link>
           <IconButton
             id="account-menu"

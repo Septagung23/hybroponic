@@ -1,11 +1,11 @@
 import ResponsiveAppBar from "../components/Navbar";
-import ParamBox from "../components/ParamBox";
+import SystemList from "../components/SystemList";
 
 function Dashboard() {
   return (
     <>
       <ResponsiveAppBar />
-      <ParamBox />
+      <SystemList />
     </>
   );
 }

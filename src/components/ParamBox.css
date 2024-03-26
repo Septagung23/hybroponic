@@ -1,6 +1,7 @@
 .box {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   overflow: hidden;
   color: #000;
   font-family: "Source Sans Pro", "Arial", sans-serif !important;

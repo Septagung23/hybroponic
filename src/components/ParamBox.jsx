@@ -1,5 +1,5 @@
 import { FormControlLabel, FormGroup, Switch } from "@mui/material";
-import "./Box.css";
+import "./ParamBox.css";
 import { useState } from "react";
 
 export default function ParamBox() {

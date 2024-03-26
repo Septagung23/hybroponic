@@ -1,22 +1,20 @@
-import { IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 import "./SystemList.css";
-import SettingsIcon from "@mui/icons-material/Settings";
 
 export default function SystemList() {
   return (
-    <div className="box">
+    <div className="system-container">
       <h1 id="title">System List</h1>
       <div className="system-box">
         <h1>System 1</h1>
-        <IconButton>
-          <SettingsIcon className="setting-icon" />
-        </IconButton>
-      </div>
-      <div className="system-box">
-        <h1>System 2</h1>
-        <IconButton>
-          <SettingsIcon className="setting-icon" />
-        </IconButton>
+        <div className="button-box">
+          <Link to="/dashboard">
+            <button>Dashboard</button>
+          </Link>
+          <Link to="/editsystem">
+            <button>Setting</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

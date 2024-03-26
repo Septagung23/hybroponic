@@ -1,13 +1,12 @@
+import React from "react";
 import ResponsiveAppBar from "../components/Navbar";
-import SystemList from "../components/SystemList";
+import ParamBox from "../components/ParamBox";
 
-function Dashboard() {
+export default function Dashboard() {
   return (
     <>
       <ResponsiveAppBar />
-      <SystemList />
+      <ParamBox />
     </>
   );
 }
-
-export default Dashboard;

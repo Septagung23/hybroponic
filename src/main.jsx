@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import System from "./pages/System";
 import History from "./pages/History";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import AddSystem from "./pages/AddSystem";
+import Dashboard from "./pages/Dashboard";
 import PublicRoutes from "./routes/PublicRoutes";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Root from "./root";
-import SystemPage from "./pages/SystemPage";
-import Profile from "./pages/Profile";
+import EditSystem from "./pages/EditSystem";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/",
+            element: <System />,
+          },
+          {
+            path: "/dashboard",
             element: <Dashboard />,
           },
           {
@@ -37,8 +43,9 @@ const router = createBrowserRouter([
           },
           {
             path: "/system",
-            element: <SystemPage />,
+            element: <AddSystem />,
           },
+          { path: "/editSystem", element: <EditSystem /> },
           {
             path: "/profile",
             element: <Profile />,

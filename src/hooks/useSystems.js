@@ -7,13 +7,13 @@ import { collection, getDocs, query } from "firebase/firestore";
  *
  * @returns {{
  *   data: {
- *     maxPh: number,
- *     maxTds: number,
+ *     name: string,
+ *     minTemp: number
  *     maxTemp: number,
  *     minPh: number,
+ *     maxPh: number,
  *     minTds: number,
- *     minTemp: number,
- *     name: string
+ *     maxTds: number,
  *   }[],
  *   loading: boolean,
  *   error: any

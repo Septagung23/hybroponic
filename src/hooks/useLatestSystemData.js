@@ -15,13 +15,11 @@ import {
  * @param {string} systemId - The ID of the system.
  * @returns {{
  *   data: {
- *     maxPh: number,
- *     maxTds: number,
- *     maxTemp: number,
- *     minPh: number,
- *     minTds: number,
- *     minTemp: number,
- *     name: string
+ *     system: import('firebase/firestore').DocumentReference,
+ *     temp: number,
+ *     ph: number,
+ *     tds: number,
+ *     timestamp: string
  *   },
  *   loading: boolean,
  *   error: import('firebase/firestore').FirestoreError
@@ -38,7 +36,6 @@ export default function useLatestSystemData(systemId) {
 
       const q = query(
         collection(db, "data"),
-
         where("system", "==", systemRef),
         orderBy("timestamp", "desc"),
         limit(1)

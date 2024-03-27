@@ -5,10 +5,17 @@
   align-items: center;
   margin: 1rem;
   padding: 1rem;
-  gap: 1rem;
 }
 .system-container h1 {
   margin: 0;
+}
+.system-container a {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+.system-container button {
+  background-color: #4caf50;
+  color: white;
 }
 
 .system-box {
@@ -21,15 +28,14 @@
   color: black;
   border-radius: 1rem;
 }
-.system-box button {
-  background-color: #4caf50;
-  color: white;
-}
 .button-box {
   display: flex;
   gap: 1rem;
 }
+.button-box a {
+  margin-bottom: 0;
+}
+
 #title {
   color: white;
-  margin-bottom: 1rem;
 }

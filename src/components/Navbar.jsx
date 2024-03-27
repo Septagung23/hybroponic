@@ -69,9 +69,6 @@ function ResponsiveAppBar() {
           <Link to="/history">
             <Button color="inherit">History</Button>
           </Link>
-          <Link to="/system">
-            <Button color="inherit">System</Button>
-          </Link>
           <IconButton
             id="account-menu"
             aria-controls={open ? "basic-menu" : undefined}

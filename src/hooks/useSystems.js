@@ -7,6 +7,7 @@ import { collection, getDocs, query } from "firebase/firestore";
  *
  * @returns {{
  *   data: {
+ *     id: string,
  *     name: string,
  *     minTemp: number
  *     maxTemp: number,
@@ -31,7 +32,10 @@ export default function useSystems() {
       try {
         const q = query(collection(db, "systems"));
         const querySnapshot = await getDocs(q);
-        const systems = querySnapshot.docs.map((doc) => doc.data());
+        const systems = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
         setData(systems);
       } catch (error) {
         setError(error);
